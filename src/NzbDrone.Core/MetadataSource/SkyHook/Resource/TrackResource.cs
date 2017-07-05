@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,8 @@ namespace NzbDrone.Core.MetadataSource.SkyHook.Resource
         public int DurationMs { get; set; }
         public string Href { get; set; }
         public string Id { get; set; }
+
+        [JsonProperty("Title")]
         public string TrackName { get; set; }
         public int TrackNumber { get; set; }
         public bool Explicit { get; set; }
